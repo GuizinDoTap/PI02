@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://s2-g1.glbimg.com/b186jw5kQ0T6H49_IIVwQ1sHkZk=/0x0:1900x1200/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/8/Y/CzOrzaS86L4ENIbEcAOg/campanha-agasalho-sesc-pr-drive-thru.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container .importance-section {
+    text-align: justify;
+}
+
+header a {
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+header h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+.importance-section {
+    margin-top: 20px;
+}
+
+.importance-section h2 {
+    color: #333;
+}
+
+.importance-section p {
+    color: #666;
+}
+
+.importance-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.call-to-action {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    color: #333;
+}
+
+.call-to-action p {
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Registro de Produto</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="Página de Registro de Usuário.html">Registre-se</a>
+        </header>
+        <h2>Cadastro de Produtos</h2>
+        <form id="addItem">
+            <input type="text" id="itemName" placeholder="Nome do Item" required>
+            <textarea id="itemDescription" placeholder="Descrição do Item" required></textarea>
+            <input type="text" id="itemSize" placeholder="Tamanho do Item" required>
+            <input type="file" id="itemImage" accept="image/*" required>
+            <button type="submit">Adicionar Item</button>
+        </form>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>
