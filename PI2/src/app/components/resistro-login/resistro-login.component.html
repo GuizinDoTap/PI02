@@ -1,1 +1,112 @@
-<p>resistro-login works!</p>
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="container my-5">
+    <div class="mb-3">
+        <label for="nome" class="form-label"><strong>Nome completo</strong></label>
+        <input 
+            id="nome" 
+            type="text" 
+            class="form-control" 
+            [ngClass]="{
+                'is-valid': nome.valid,
+                'is-invalid': nome.invalid && nome.touched 
+            }"
+            name="nome" 
+            [(ngModel)]="usuario.nome" 
+            #nome="ngModel"
+            minlength="8"
+            required=""
+        />
+        <div *ngIf="nome.touched && nome.invalid" class="invalid-feedback">
+            Nome é inválido!
+        </div>
+        
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label"><strong>Email</strong></label>
+        <input 
+            id="email" 
+            type="email" 
+            class="form-control"
+            [(ngModel)]="usuario.email" 
+            #email="ngModel"
+            [ngClass]="{
+                'is-valid': email.valid,
+                'is-invalid': email.invalid && email.touched 
+            }"
+            name="email" 
+            required=""
+        />
+        <div *ngIf="email.touched && email.invalid" class="invalid-feedback">
+            Email é inválido!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="senha" class="form-check-label"><strong>Senha</strong></label>
+        <input 
+            id="senha" 
+            type="password" 
+            class="form-control" 
+            name="senha" 
+            [(ngModel)]="usuario.senha"
+            #senha="ngModel"
+            [ngClass]="{
+                'is-valid': senha.valid,
+                'is-invalid': senha.invalid && senha.touched 
+            }"
+            required=""
+        />
+        <div *ngIf="senha.touched && senha.invalid" class="invalid-feedback">
+            Senha inválida!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="cidade" class="form-label"><strong>Cidade</strong></label>
+        <input 
+            id="cidade" 
+            type="text" 
+            class="form-control" 
+            name="cidade" 
+            [(ngModel)]="usuario.endereco.cidade"
+            #cidade="ngModel"
+            [ngClass]="{
+                'is-valid': cidade.valid,
+                'is-invalid': cidade.invalid && cidade.touched 
+            }"
+            required=""
+        />
+        <div *ngIf="cidade.touched && nome.invalid" class="invalid-feedback">
+            Cidade inválida!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="estado" class="form-label"><strong>Estado</strong></label>
+        <input 
+            type="text" 
+            id="estado" 
+            class="form-control"
+            #estado="ngModel" 
+            [ngClass]="{
+                'is-valid': estado.valid,
+                'is-invalid': estado.invalid && estado.touched 
+            }"
+            name="estado" 
+            [(ngModel)]="usuario.endereco.estado"
+            required=""
+            minlength="2"
+            max="2"
+        />
+        <div *ngIf="estado.touched && estado.invalid" class="invalid-feedback">
+            Estado inválido!
+        </div>
+    </div>
+
+    <button [disabled]="form.invalid" (click)="aviso_registro()" type="submit" class="btn btn-primary"
+    >
+        Registrar-se
+    </button>
+    
+
+</form>

@@ -8,6 +8,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { usuarioLogadoGuard } from './guards/usuario-logado.guard';
 import { SairProdutoDetailGuard } from './guards/sair-produto-datail.guard';
+import { ResistroLoginComponent } from './components/resistro-login/resistro-login.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'registro-usuario',
+    component: ResistroLoginComponent
   },
   {
     path: 'produtos',
