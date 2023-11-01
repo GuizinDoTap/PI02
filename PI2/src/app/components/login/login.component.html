@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Página de login</h2>
+    <input
+        [(ngModel)]="email"
+        class="form-control mb-3" 
+        type="email"
+        placeholder="Digite o email"
+    />
+    <input
+        [(ngModel)]="senha"
+        class="form-control mb-3" 
+        type="password"
+        placeholder="Digite o senha"
+    />
+    <button
+        (click)="login()"
+        [disabled]="!email || !senha"
+        class="btn btn-primary"
+    >
+        Login
+    </button>
+</div>
