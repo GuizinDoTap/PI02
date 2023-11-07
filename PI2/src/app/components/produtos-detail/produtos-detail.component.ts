@@ -12,9 +12,14 @@ export class ProdutosDetailComponent implements OnInit{
   produto?: Produto;
   naoEncontrado: boolean = false;
   pressionouFechar: boolean = false;
+  pressionouAdicionar: boolean = false;
 
   aviso() {
     alert("Você precisa clicar em fechar!");
+  }
+
+  aviso2() {
+    alert("Pedido efetuado!");
   }
 
   constructor(

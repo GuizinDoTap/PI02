@@ -7,6 +7,12 @@
         <div class="card-body">
             <h5 class="card-title">{{produto?.nome}}</h5>
             <p class="card-text">{{produto?.descricao}}</p>
+            <p class="card-text">{{produto?.nomeprov}}</p>
+            <p class="card-text">{{produto?.contato}}</p>
+            <p class="card-text">{{produto?.email}}</p>
+            <a routerLink="../" (click)="pressionouAdicionar=true" class="btn btn-primary">Efetuar pedido</a>
+            <br/>
+            <br/>
             <a routerLink="../" (click)="pressionouFechar=true" class="btn btn-primary">Fechar</a>
         </div>
     </div>
