@@ -20,10 +20,6 @@ export class SairProdutoDetailGuard implements CanDeactivate <ProdutosDetailComp
     | Observable<boolean | UrlTree> 
     | Promise<boolean | UrlTree> {
 
-      if(!component.pressionouFechar) {
-        component.aviso();
-      }
-
       return component.pressionouFechar;
   }
 };

@@ -1,23 +1,24 @@
 <div *ngIf="!naoEncontrado; else containerNaoEncontrado">
-    <div class="card">
+    <div class="card d-flex justify-content-center align-items-center">
         <div class="card-header">
             Produto Nº{{produto?.cod}}
         </div>
-        <img src="{{produto?.imagem}}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <img [src]="produto?.imagem" class="card-img-top" alt="..." style="max-width: 200px;">
+        <div class="card-body justify-content-cente">
             <h5 class="card-title">{{produto?.nome}}</h5>
             <p class="card-text">{{produto?.descricao}}</p>
-            <p class="card-text">{{produto?.nomeprov}}</p>
-            <p class="card-text">{{produto?.contato}}</p>
-            <p class="card-text">{{produto?.email}}</p>
-            <a routerLink="../" (click)="pressionouAdicionar=true" class="btn btn-primary">Efetuar pedido</a>
+            <p class="card-text"><strong>Doador:</strong> {{produto?.nomeprov}}</p>
+            <p class="card-text"><strong>Tel:</strong> {{produto?.contato}}</p>
+            <p class="card-text"><strong>Email</strong> {{produto?.email}}</p>
+        </div>
+        <div class="text-center">
+            <a routerLink="../" (click)="efetuarPedido()" class="btn btn-primary mb-3">Efetuar pedido</a>
             <br/>
-            <br/>
-            <a routerLink="../" (click)="pressionouFechar=true" class="btn btn-primary">Fechar</a>
+            <a class="btn btn-primary" (click)="fechar()">Fechar</a>
         </div>
     </div>
 </div>
 
 <ng-template #containerNaoEncontrado>
-    <h2>Produto não encontrado!</h2>
+    <h2 class="text-center">Produto não encontrado!</h2>
 </ng-template>

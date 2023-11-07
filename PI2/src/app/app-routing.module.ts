@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { usuarioLogadoGuard } from './guards/usuario-logado.guard';
 import { SairProdutoDetailGuard } from './guards/sair-produto-datail.guard';
 import { ResistroLoginComponent } from './components/resistro-login/resistro-login.component';
+import { RegistroProdutoComponent } from './components/registro-produto/registro-produto.component';
 
 const routes: Routes = [
   {
@@ -19,11 +20,15 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [usuarioLogadoGuard]
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'registro-produto',
+    component: RegistroProdutoComponent,
+    canActivate: [usuarioLogadoGuard]
   },
   {
     path: 'registro-usuario',
@@ -33,13 +38,10 @@ const routes: Routes = [
     path: 'produtos',
     component: ProdutosComponent,
     canActivate: [usuarioLogadoGuard],
-    children: [
-      {
-        path: ':cod',
-        component: ProdutosDetailComponent,
-        canDeactivate: [SairProdutoDetailGuard]
-      },
-    ]
+  },
+  {
+    path: 'produtos/:cod',
+    component: ProdutosDetailComponent,
   },
   {
     path: 'faq',

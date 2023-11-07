@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Produto } from 'src/app/models/produto';
 import { ProdutoService } from 'src/app/services/produto.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-produtos-detail',
@@ -14,19 +16,22 @@ export class ProdutosDetailComponent implements OnInit{
   pressionouFechar: boolean = false;
   pressionouAdicionar: boolean = false;
 
-  aviso() {
-    alert("Você precisa clicar em fechar!");
-  }
-
-  aviso2() {
-    alert("Pedido efetuado!");
-  }
-
   constructor(
     private produtoService: ProdutoService,
-    private route: ActivatedRoute
-    ) {
+    private route: ActivatedRoute,
+    private location: Location
+    ) {}
+  
+
+  efetuarPedido() {
+    alert("Pedido efetuado com sucesso!");
   }
+
+  fechar() {
+    this.location.back();
+  }
+
+
 
   ngOnInit(): void {
     this.route.params.subscribe({

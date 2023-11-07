@@ -6,6 +6,8 @@
 />
 
 <button [disabled]="!cod" class="btn btn-primary" (click)="irParaDetail()">Buscar</button>
+
+<!--
 <div class="d-flex justfy-content-around aling-items-center">
   <table class="table w-75 mt-3">
     <thead>
@@ -29,16 +31,22 @@
   </table>
   <router-outlet></router-outlet>
 </div>
+-->
 
 
-
-<!--
-  <div *ngFor="let prod of produtos" class="card justfy-content-around aling-items-center" style="width: 18rem;">
-  <img [src]="prod.imagem" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{prod.nome}}</h5>
-    <p class="card-text">{{prod.descricao}}</p>
-    <a routerLink="/produtos/{{prod.cod}}" class="btn btn-primary">Ver produto</a>
+<div class="d-flex justify-content-center align-items-center">
+  <div *ngFor="let prod of produtos" class="card" style="width: 18rem; margin: 10px;">
+    <div class="card-body">
+      <div style="height: 200px; overflow: hidden;">
+        <img [src]="prod.imagem" class="card-img-top" style="object-fit: cover; width: 100%; height: 100%;" alt="...">
+      </div>
+      <h5 class="card-title">{{prod.nome}}</h5>
+      <p class="card-text">Cod: {{prod.cod}}</p>
+      <p class="card-text">{{prod.descricao}}</p>
+      <a routerLink="/produtos/{{prod.cod}}" class="btn btn-primary">Ver produto</a>
+    </div>
   </div>
 </div>
--->
+
+
+

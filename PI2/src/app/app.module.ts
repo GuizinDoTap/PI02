@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { ResistroLoginComponent } from './components/resistro-login/resistro-login.component';
+import { RegistroProdutoComponent } from './components/registro-produto/registro-produto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResistroLoginComponent } from './components/resistro-login/resistro-log
     NotFoundComponent,
     NavbarComponent,
     LoginComponent,
-    ResistroLoginComponent
+    ResistroLoginComponent,
+    RegistroProdutoComponent
   ],
   imports: [
     BrowserModule,
